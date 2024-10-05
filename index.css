@@ -1,0 +1,197 @@
+/* Add your CSS here. Utilize Tailwind classes or write custom styles to bring your unique design to life. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+body {
+  backdrop-filter: blur(25px);
+  background-image: url(./imgs/background.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px;
+  margin: auto;
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  /* align-items: start; */
+
+  grid-template-areas:
+    "side-1 side-2"
+    "side-1 side-3"
+    "side-1 ."
+    "side-1 .";
+
+  grid-template-rows: min-content min-content;
+  gap: 24px;
+}
+
+.side-1 {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: ; */
+  /* gap: 25px; */
+  /* font-weight: 600; */
+  width: 480px;
+  border-radius: 18px;
+  border: none;
+  background-color: #fff;
+  padding: 20px;
+  grid-area: side-1;
+}
+.side-2,
+.side-3 {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: ; */
+  gap: 100px;
+  /* font-weight: 600; */
+  width: 380px;
+  border-radius: 16px;
+  border: none;
+  background-color: #fff;
+  padding: 20px;
+  grid-area: side-2;
+}
+
+.side-3 {
+  grid-area: side-3;
+  justify-content: center;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.title {
+  font-weight: bold;
+  font-size: 28px;
+}
+.card-header p {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.item-1 {
+  display: grid;
+
+  grid-template-areas:
+    "img item-name close"
+    "img items price";
+  grid-template-rows: min-content min-content;
+  grid-template-columns: auto auto 1fr;
+  gap: 15px;
+  /* margin-bottom: 0; */
+}
+
+.title {
+  grid-area: title;
+}
+
+.items_num {
+  grid-area: items_num;
+  justify-self: end;
+}
+
+.img {
+  grid-area: img;
+
+  /* grid-column: auto;
+  grid-row: auto; */
+}
+
+.item-name {
+  grid-area: item-name;
+  align-self: end;
+  font-size: 20px;
+  font-weight: 500;
+}
+.close {
+  grid-area: close;
+  justify-self: end;
+  align-self: end;
+}
+
+.items {
+  grid-area: items;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.price {
+  grid-area: price;
+  justify-self: end;
+  text-align: end;
+  width: 76px;
+  height: 29px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.add,
+.remove {
+  padding: 0 8px;
+  font-weight: 600;
+  background-color: #eaeaea;
+  border: none;
+  text-align: center;
+  border-radius: 8px;
+}
+.item-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-2 p.item-2_1 {
+  font-size: 22px;
+  font-weight: 600;
+  width: 50%;
+}
+.item-2 p.price_1 {
+  font-size: 22px;
+  font-weight: bold;
+  /* width: 50%; */
+}
+hr {
+  width: 100%;
+}
+.total {
+  width: 50%;
+  font-size: 26px;
+  font-weight: bold;
+}
+.total-price {
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pay {
+  width: 340px;
+  height: 40px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 8px;
+}
+
+.promo {
+  border: 1px black solid;
+  border-radius: 8px;
+  width: 340px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 10px;
+}
